@@ -11,6 +11,10 @@ def calculate_profit():
     You can assume the user will enter only numeric characters, e.g. "3000", not "$3,000.00"
     The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
     """
+    total_sales= int(input("enter the amount of total sales: "))
+    profit=float((total_sales*23)/100)
+    print("\"profit: ", profit, "\" for sales of " , total_sales)
+
 
 
 def calculate_quotient_and_remainder():
@@ -22,6 +26,16 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
+    # Asking the user to input two integers
+    number1 = int(input("Enter number #1: "))
+    number2 = int(input("Enter number #2: "))
+
+    # Calculating quotient and remainder
+    quotient = int( number1 // number2)
+    remainder = (number1 % number2)
+
+    # Output
+    print(f"{number2} goes into {number1} a total of {quotient} times with a remainder of {remainder}")
 
 
 def calculate_miles_per_gallon():
@@ -35,7 +49,17 @@ def calculate_miles_per_gallon():
       Gas used (gallons): 25
       Miles per gallon: 2.2
     """
-
+    # Asking the user to input the number of miles driven
+    miles_driven = float(input("Miles driven: "))
+    
+    # Asking the user to input the gallons of gas used
+    gas_used = float(input("Gas used (gallons): "))
+    
+    # Calculating the car's MPG
+    mpg = miles_driven / gas_used
+    
+    # Result
+    print(f"Miles per gallon: {mpg }")
 
 def align_text():
     """
@@ -53,3 +77,18 @@ def align_text():
       Price #2: $   10.00
       Price #3: $ 9532.60
     """
+    # Asking the user to input 3 price values as floating point numbers
+    price1 = float(input("Enter price #1: "))
+    price2 = float(input("Enter price #2: "))
+    price3 = float(input("Enter price #3: "))
+
+    # Formatting the prices to two decimal places and aligning them
+    formatted_price1 = f"${price1:10.2f}"
+    formatted_price2 = f"${price2:10.2f}"
+    formatted_price3 = f"${price3:10.2f}"
+
+    # Printing the formatted prices
+    print("\nHere are formatted prices!\n")
+    print(f"Price #1: {formatted_price1}")
+    print(f"Price #2: {formatted_price2}")
+    print(f"Price #3: {formatted_price3}")
